@@ -1,0 +1,31 @@
+
+- name: "ethernet-1/1"
+  admin-state: enable
+  vlan-tagging: true
+  subinterface:
+   - index: 0
+     type: bridged
+     admin-state: enable
+     vlan:
+      encap:
+       single-tagged:
+        vlan-id: 10
+
+- name: "ethernet-1/2"
+  admin-state: enable
+  vlan-tagging: true
+  subinterface:
+   - index: 0
+     type: bridged
+     admin-state: enable
+     vlan:
+      encap:
+       single-tagged:
+        vlan-id: 20
+   - index: 1
+     type: bridged
+     admin-state: enable
+     vlan:
+      encap:
+       single-tagged:
+        vlan-id: 30

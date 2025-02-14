@@ -1,0 +1,52 @@
+all:
+  vars:
+    # The generated inventory is assumed to be used from the clab host.
+    # Hence no http proxy should be used. Therefore we make sure the http
+    # module does not attempt using any global http proxy.
+    ansible_httpapi_use_proxy: false
+  children:
+    linux:
+      hosts:
+        clab-topology-client1:
+          ansible_host: 172.20.20.15
+        clab-topology-client2:
+          ansible_host: 172.20.20.14
+        clab-topology-client3:
+          ansible_host: 172.20.20.5
+        clab-topology-client4:
+          ansible_host: 172.20.20.4
+        clab-topology-client5:
+          ansible_host: 172.20.20.18
+        clab-topology-client6:
+          ansible_host: 172.20.20.2
+        clab-topology-dhcp_server:
+          ansible_host: 172.20.20.12
+    nokia_srlinux:
+      vars:
+        ansible_network_os: nokia.srlinux.srlinux
+        # default connection type for nodes of this kind
+        # feel free to override this in your inventory
+        ansible_connection: ansible.netcommon.httpapi
+        ansible_user: admin
+        ansible_password: NokiaSrl1!
+      hosts:
+        clab-topology-acc1:
+          ansible_host: 172.20.20.3
+        clab-topology-acc2:
+          ansible_host: 172.20.20.7
+        clab-topology-acc3:
+          ansible_host: 172.20.20.11
+        clab-topology-acc4:
+          ansible_host: 172.20.20.6
+        clab-topology-agg1:
+          ansible_host: 172.20.20.10
+        clab-topology-agg2:
+          ansible_host: 172.20.20.17
+        clab-topology-agg3:
+          ansible_host: 172.20.20.13
+        clab-topology-agg4:
+          ansible_host: 172.20.20.9
+        clab-topology-core1:
+          ansible_host: 172.20.20.8
+        clab-topology-core2:
+          ansible_host: 172.20.20.16

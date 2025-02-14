@@ -1,0 +1,946 @@
+{
+  "name": "topology",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-188636f2d454",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "mtu": 1500,
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": [],
+  "nodes": {
+    "acc1": {
+      "index": "0",
+      "shortname": "acc1",
+      "longname": "clab-topology-acc1",
+      "fqdn": "acc1.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/acc1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:64:00:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/acc1",
+        "clab-node-name": "acc1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "acc2": {
+      "index": "1",
+      "shortname": "acc2",
+      "longname": "clab-topology-acc2",
+      "fqdn": "acc2.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/acc2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:f3:01:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/acc2",
+        "clab-node-name": "acc2",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "acc3": {
+      "index": "2",
+      "shortname": "acc3",
+      "longname": "clab-topology-acc3",
+      "fqdn": "acc3.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/acc3",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:b8:02:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/acc3",
+        "clab-node-name": "acc3",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "acc4": {
+      "index": "3",
+      "shortname": "acc4",
+      "longname": "clab-topology-acc4",
+      "fqdn": "acc4.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/acc4",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:f2:03:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/acc4",
+        "clab-node-name": "acc4",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "agg1": {
+      "index": "4",
+      "shortname": "agg1",
+      "longname": "clab-topology-agg1",
+      "fqdn": "agg1.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/agg1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:cc:04:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/agg1",
+        "clab-node-name": "agg1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "agg2": {
+      "index": "5",
+      "shortname": "agg2",
+      "longname": "clab-topology-agg2",
+      "fqdn": "agg2.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/agg2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::11",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:7b:05:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/agg2",
+        "clab-node-name": "agg2",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "agg3": {
+      "index": "6",
+      "shortname": "agg3",
+      "longname": "clab-topology-agg3",
+      "fqdn": "agg3.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/agg3",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.13",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::d",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:c5:06:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/agg3",
+        "clab-node-name": "agg3",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "agg4": {
+      "index": "7",
+      "shortname": "agg4",
+      "longname": "clab-topology-agg4",
+      "fqdn": "agg4.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/agg4",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:a2:07:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/agg4",
+        "clab-node-name": "agg4",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "client1": {
+      "index": "8",
+      "shortname": "client1",
+      "longname": "clab-topology-client1",
+      "fqdn": "client1.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/client1",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.15",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::f",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/client1",
+        "clab-node-name": "client1",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "client2": {
+      "index": "9",
+      "shortname": "client2",
+      "longname": "clab-topology-client2",
+      "fqdn": "client2.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/client2",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.14",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::e",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/client2",
+        "clab-node-name": "client2",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "client3": {
+      "index": "10",
+      "shortname": "client3",
+      "longname": "clab-topology-client3",
+      "fqdn": "client3.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/client3",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/client3",
+        "clab-node-name": "client3",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "client4": {
+      "index": "11",
+      "shortname": "client4",
+      "longname": "clab-topology-client4",
+      "fqdn": "client4.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/client4",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/client4",
+        "clab-node-name": "client4",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "client5": {
+      "index": "12",
+      "shortname": "client5",
+      "longname": "clab-topology-client5",
+      "fqdn": "client5.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/client5",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.18",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::12",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/client5",
+        "clab-node-name": "client5",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "client6": {
+      "index": "13",
+      "shortname": "client6",
+      "longname": "clab-topology-client6",
+      "fqdn": "client6.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/client6",
+      "kind": "linux",
+      "image": "ghcr.io/srl-labs/alpine",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/client6",
+        "clab-node-name": "client6",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 22,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 443,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 80,
+          "protocol": "tcp"
+        }
+      ]
+    },
+    "core1": {
+      "index": "14",
+      "shortname": "core1",
+      "longname": "clab-topology-core1",
+      "fqdn": "core1.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/core1",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:2a:0e:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/core1",
+        "clab-node-name": "core1",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "core2": {
+      "index": "15",
+      "shortname": "core2",
+      "longname": "clab-topology-core2",
+      "fqdn": "core2.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/core2",
+      "kind": "nokia_srlinux",
+      "image": "ghcr.io/nokia/srlinux:24.10.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.16",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::10",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "1a:a1:0f:00:00:00",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "nokia_srlinux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/core2",
+        "clab-node-name": "core2",
+        "clab-node-type": "ixrd2l",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+      ]
+    },
+    "dhcp_server": {
+      "index": "16",
+      "shortname": "dhcp_server",
+      "longname": "clab-topology-dhcp_server",
+      "fqdn": "dhcp_server.topology.io",
+      "group": "",
+      "labdir": "/home/Jaccident/FYP/clab-topology/dhcp_server",
+      "kind": "linux",
+      "image": "docker.cloudsmith.io/isc/docker/kea-dhcp4:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-188636f2d454",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/Jaccident/FYP/clab-topology/dhcp_server",
+        "clab-node-name": "dhcp_server",
+        "clab-node-type": "",
+        "clab-owner": "root",
+        "clab-topo-file": "/home/Jaccident/FYP/topology.clab.yml",
+        "containerlab": "topology"
+      },
+      "port-bindings": [
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 67,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 67,
+          "protocol": "udp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8000,
+          "protocol": "tcp"
+        },
+        {
+          "host-ip": "",
+          "host-port": 0,
+          "port": 8001,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "core1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:a9:b5:8c",
+        "peer": "z"
+      },
+      "z": {
+        "node": "agg1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:2b:61:e3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "core1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:97:2f:19",
+        "peer": "z"
+      },
+      "z": {
+        "node": "agg3",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:91:da:a7",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "core2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:8d:28:a4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "agg2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:41:d6:18",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "core2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:29:04:63",
+        "peer": "z"
+      },
+      "z": {
+        "node": "agg4",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:42:4f:45",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "agg1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:0c:48:07",
+        "peer": "z"
+      },
+      "z": {
+        "node": "acc1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:a1:6f:6f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "agg1",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:23:8c:0e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "acc2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:2d:a0:96",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "agg2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:7d:05:38",
+        "peer": "z"
+      },
+      "z": {
+        "node": "acc1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:13:68:65",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "agg2",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:66:6f:4b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "acc2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:6d:2f:4c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "agg3",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:19:f9:2a",
+        "peer": "z"
+      },
+      "z": {
+        "node": "acc3",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:48:fa:93",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "agg3",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:58:b4:88",
+        "peer": "z"
+      },
+      "z": {
+        "node": "acc4",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:b2:40:f3",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "agg4",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:f4:10:f0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "acc3",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:a9:d1:6e",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "agg4",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:07:e2:1d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "acc4",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:38:1f:06",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "acc1",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:5b:f4:49",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:a3:85:3f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "acc2",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:a5:07:a5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:b0:b6:6c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "acc3",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:80:26:b6",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client3",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:6a:01:18",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "acc3",
+        "interface": "e1-4",
+        "mac": "aa:c1:ab:8d:40:5b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client4",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:19:5b:64",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "acc4",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:07:e8:6d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client5",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:78:5d:66",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "acc4",
+        "interface": "e1-4",
+        "mac": "aa:c1:ab:3e:54:29",
+        "peer": "z"
+      },
+      "z": {
+        "node": "client6",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:1e:ab:ce",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "dhcp_server",
+        "interface": "e1",
+        "mac": "aa:c1:ab:ee:2a:0f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "core1",
+        "interface": "e1-4",
+        "mac": "aa:c1:ab:4f:07:2a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "dhcp_server",
+        "interface": "e2",
+        "mac": "aa:c1:ab:20:67:8e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "core2",
+        "interface": "e1-4",
+        "mac": "aa:c1:ab:f6:9d:e8",
+        "peer": "a"
+      }
+    }
+  ]
+}

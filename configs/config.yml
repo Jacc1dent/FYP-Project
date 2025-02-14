@@ -1,0 +1,76 @@
+vlans:
+ vlan10:
+  id: 10
+  description: "Clients VLAN 10"
+ vlan20:
+  id: 20
+  description: "Clients VLAN 20"
+ vlan30:
+  id: 30
+  description: "Clients VLAN 30"
+ vlan99:
+  id: 99
+  description: "Management VLAN"
+
+devices:
+ core1:
+  ip: "192.168.1.1"
+  port: 6030
+ core2:
+  ip: "192.168.1.2"
+  port: 6030
+ agg1:
+  ip: "192.168.2.1"
+  port: 6030
+ agg2:
+  ip: "192.168.2.2"
+  port: 6030
+ agg3:
+  ip: "192.168.3.1"
+  port: 6030
+ agg4:
+  ip: "192.168.3.2"
+  port: 6030
+ acc1:
+  ip: "192.168.4.1"
+  port: 6030
+  interfaces:
+   ethernet-1/1: {mode: trunk, allowed_vlans: [10, 20, 30] }
+   ethernet-1/2: {mode: trunk, allowed_vlans: [10, 20, 30] }
+   ethernet-1/3: {mode: access, vlan: 10 }
+ acc2:
+  ip: "192.168.4.2"
+  port: 6030
+  interfaces:
+   ethernet-1/1: {mode: trunk, allowed_vlans: [10, 20, 30] }
+   ethernet-1/2: {mode: trunk, allowed_vlans: [10, 20, 30] }
+   ethernet-1/3: {mode: access, vlan: 10 }
+ acc3:
+  ip: "192.168.5.1"
+  port: 6030
+  interfaces:
+   ethernet-1/1: {mode: trunk, allowed_vlans: [10, 20, 30] }
+   ethernet-1/2: {mode: trunk, allowed_vlans: [10, 20, 30] }
+   ethernet-1/3: {mode: access, vlan: 20 }
+   ethernet-1/4: {mode: access, vlan: 30 }
+ acc4:
+  ip: "192.168.5.2"
+  port: 6030
+  interfaces:
+   ethernet-1/1: {mode: trunk, allowed_vlans: [10, 20, 30] }
+   ethernet-1/2: {mode: trunk, allowed_vlans: [10, 20, 30] }
+   ethernet-1/3: {mode: access, vlan: 20 }
+   ethernet-1/4: {mode: access, vlan: 30 }
+
+dhcp_server:
+ name: "dhcp_server"
+ ip: "192.168.99.10"
+ port: 6030
+
+dhcp_relay:
+ vlan10: 
+  servers: ["192.168.99.10"]
+ vlan20:
+  servers: ["192.168.99.10"]
+ vlan30:
+  servers: ["192.168.99.10"]

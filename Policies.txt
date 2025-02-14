@@ -1,0 +1,47 @@
+Policies
+
+1. Access Control Policies
+	VLAN 10 (Students)
+		- Access internal learning resources
+		- No access to administrative or critical network devices
+		- Communicate within VLAN 10 but no access to VLAN 20 or 30
+		- Potentially restricted internet access if implemented
+	VLAN 20 (Faculty/Staff)
+		- Access student VLAN for teaching-related purposes
+		- Access internal admin resources but not network infrastructure
+		- Unrestricted internet access
+	VLAN 30 (Admin/IT Staff)
+		- Full network access (VLANs, Routers, firewalls)
+		- Control policies for all VLANs
+		- Configure DHCP, routing and firewall policies
+		- Admins get logged out after 15 mins of inactivity (if implemented)
+
+		
+2. Addressing Policies
+	DHCP Server Implementation
+		VLAN 10 - Students get IPs dynamically (192.168.10.0/24) (End Devices)
+		VLAN 20 - Staff get IPs dynamically (192.168.20.0/24) (End Devices)
+		VLAN 30 - Admins get IPs dynamically (192.168.30.0/24) (End Devices)
+		
+3. Internet Access Policies
+	Students
+		Restricted access to external sites
+		Allowed access to whitelisted educational resources
+	Staff
+		Unrestricted access but monitored for security threats
+	Admins
+		Full access (SSH/VPN access for remote administration)
+	
+4. Inter-VLAN Routing
+	ACLs restrict communication where necessary (10 cant initiate communication with 30)
+	
+	
+5. Address Allocation & Firewalls
+	Firewalls
+		Block unauthorised access between VLANs (10->30)
+		Restrict external connections from student VLANs
+		Log and monitor access attempts
+	Encryption & Secure Access Policy
+		TLS Encryption for gRPC communication
+	Logging/Monitoring
+		Enable telemetry for monitoring latency and bandwidth

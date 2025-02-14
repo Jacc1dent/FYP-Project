@@ -1,0 +1,167 @@
+name: topology
+
+topology:
+ nodes:
+ # Core Layer
+  core1:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/core1.yml
+   
+  core2:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/core2.yml
+  
+  # Aggregation Layer
+  agg1:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/agg1.yml
+   
+  agg2:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/agg2.yml
+   
+  agg3:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/agg3.yml
+   
+  agg4:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/agg4.yml
+  
+  # Access Layer
+  acc1:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/acc1.yml
+   
+  acc2:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/acc2.yml
+   
+  acc3:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/acc3.yml
+   
+  acc4:
+   kind: nokia_srlinux
+   image: ghcr.io/nokia/srlinux:24.10.1
+   startup-config: configs/acc4.yml
+   
+  client1:
+   kind: linux
+   image: ghcr.io/srl-labs/alpine
+   exec:
+    #- "apk add --no-cache busybox-extras"
+    #- "udhcpc -i eth0"
+   #binds:
+    #- configs/client.sh:/config.sh
+   #exec:
+    #- "ash -c '/config.sh 1'"
+    
+  client2:
+   kind: linux
+   image: ghcr.io/srl-labs/alpine
+   exec:
+    #- "apk add --no-cache busybox-extras"
+    #- "udhcpc -i eth0"
+   #binds:
+    #- configs/client.sh:/config.sh
+   #exec:
+    #- "ash -c '/config.sh 2'"
+    
+  client3:
+   kind: linux
+   image: ghcr.io/srl-labs/alpine
+   exec:
+    #- "apk add --no-cache busybox-extras"
+    #- "udhcpc -i eth0"
+   #binds:
+    #- configs/client.sh:/config.sh
+   #exec:
+    #- "ash -c '/config.sh 3'"
+     
+  client4:
+   kind: linux
+   image: ghcr.io/srl-labs/alpine
+   exec:
+    #- "apk add --no-cache busybox-extras"
+    #- "udhcpc -i eth0"
+   #binds:
+    #- configs/client.sh:/config.sh
+   #exec:
+    #- "ash -c '/config.sh 4'"
+     
+  client5:
+   kind: linux
+   image: ghcr.io/srl-labs/alpine
+   exec:
+    #- "apk add --no-cache busybox-extras"
+    #- "udhcpc -i eth0"
+   #binds:
+    #- configs/client.sh:/config.sh
+   #exec:
+    #- "ash -c '/config.sh 5'"
+    
+  client6:
+   kind: linux
+   image: ghcr.io/srl-labs/alpine
+   exec:
+    #- "apk add --no-cache busybox-extras"
+    #- "udhcpc -i eth0"
+   #binds:
+    #- configs/client.sh:/config.sh
+   #exec:
+    #- "ash -c '/config.sh 6'"
+    
+  dhcp_server:
+   kind: linux
+   image: docker.cloudsmith.io/isc/docker/kea-dhcp4:latest
+   binds:
+    - ./configs/kea-dhcp4.json:/etc/kea/kea-dhcp4.json
+    #- ./configs/kea-ctrl-agent.conf:/etc/kea/kea-ctrl-agent.conf
+    - ./configs/leases-db/dhcp4.leases:/var/lib/kea/dhcp4.leases
+   #network-mode: none
+   #exec:
+    #- kea-dhcp4 -c /etc/kea/kea-dhcp4.json **exec does not work pauses the deployment**
+   
+
+ links:
+  - endpoints: [core1:e1-1, agg1:e1-1]
+  - endpoints: [core1:e1-2, agg3:e1-1]
+  - endpoints: [core2:e1-1, agg2:e1-1]
+  - endpoints: [core2:e1-2, agg4:e1-1]
+    
+  - endpoints: [agg1:e1-2, acc1:e1-1]
+  - endpoints: [agg1:e1-3, acc2:e1-1]
+  - endpoints: [agg2:e1-2, acc1:e1-2]
+  - endpoints: [agg2:e1-3, acc2:e1-2]
+    
+  - endpoints: [agg3:e1-2, acc3:e1-1]
+  - endpoints: [agg3:e1-3, acc4:e1-1]
+  - endpoints: [agg4:e1-2, acc3:e1-2]
+  - endpoints: [agg4:e1-3, acc4:e1-2]
+    
+  - endpoints: [acc1:e1-3, client1:e1-1]
+  - endpoints: [acc2:e1-3, client2:e1-1]
+    
+  - endpoints: [acc3:e1-3, client3:e1-1]
+  - endpoints: [acc3:e1-4, client4:e1-1]
+    
+  - endpoints: [acc4:e1-3, client5:e1-1]
+  - endpoints: [acc4:e1-4, client6:e1-1]
+  
+  - endpoints: [dhcp_server:e1, core1:e1-4]
+  - endpoints: [dhcp_server:e2, core2:e1-4]
+  #- endpoints: [dhcp_server:enp0s3.10, acc2:e1-10]
+  #- endpoints: [dhcp_server:enp0s3.20, acc3:e1-10]
+  #- endpoints: [dhcp_server:enp0s3.30, acc3:e1-9]
+  #- endpoints: [dhcp_server:enp0s3.20, acc4:e1-10]
+  #- endpoints: [dhcp_server:enp0s3.30, acc4:e1-9]
