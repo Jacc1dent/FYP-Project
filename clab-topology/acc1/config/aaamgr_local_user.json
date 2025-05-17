@@ -1,5 +1,15 @@
 {
  "users": {
+  "grpcuser": {
+   "password": [
+    "$y$j9T$d40f4446507a743a$IOAjBo3Jhkzr40SpFVrxfm5UtCz7K5ikdbgD2WJEA.5"
+   ],
+   "failed_login_count": 0,
+   "locked_out": false,
+   "password_changed_after_first_login": false,
+   "password_update_time": "2025-04-28T18:00:30Z",
+   "last_successful_login_time": "2025-05-17T14:06:00Z"
+  },
   "admin": {
    "password": [
     "$y$j9T$pNVjOgcNNGIWjBcdDfK/7.$Ir4uYxszxtqzVj5AGiZvdWJGs.bpLWBJvHON3YgqnC2"
@@ -7,7 +17,8 @@
    "failed_login_count": 0,
    "locked_out": false,
    "password_changed_after_first_login": false,
-   "password_update_time": "2025-02-14T21:14:25Z"
+   "password_update_time": "2025-04-02T15:23:22Z",
+   "last_successful_login_time": "2025-04-03T17:45:14Z"
   }
  },
  "ntp_sync": false,

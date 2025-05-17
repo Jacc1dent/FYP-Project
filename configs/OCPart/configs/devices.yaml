@@ -1,0 +1,89 @@
+acc1:
+ host: 172.20.20.8
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: access
+
+acc2:
+ host: 172.20.20.9
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: access
+
+acc3:
+ host: 172.20.20.10
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: access
+
+acc4:
+ host: 172.20.20.11
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: access
+
+agg1:
+ host: 172.20.20.4
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: aggregation
+
+agg2:
+ host: 172.20.20.5
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: aggregation
+
+agg3:
+ host: 172.20.20.6
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: aggregation
+
+agg4:
+ host: 172.20.20.7
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: aggregation
+
+core1:
+ host: 172.20.20.2
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: core
+
+core2:
+ host: 172.20.20.3
+ port: 57400
+ username: admin
+ password: admin
+ vendor: nokia
+ insecure: true
+ role: core

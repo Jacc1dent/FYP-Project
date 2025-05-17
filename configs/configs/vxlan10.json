@@ -1,0 +1,16 @@
+{
+  "tunnel-interface": [
+    {
+      "name": "vxlan1",
+      "vxlan-interface": [
+        {
+          "index": 10,
+          "type": "bridged",
+          "ingress": {
+            "vni": 10
+          }
+        }
+      ]
+    }
+  ]
+}

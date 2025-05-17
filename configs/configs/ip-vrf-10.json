@@ -1,0 +1,14 @@
+{
+  "network-instance": [
+    {
+      "name": "ip-vrf-10",
+      "type": "ip-vrf",
+      "admin-state": "enable",
+      "interface": [
+        {
+          "name": "irb0.10"
+        }
+      ]
+    }
+  ]
+}

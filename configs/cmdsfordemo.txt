@@ -1,0 +1,24 @@
+show network-instance default protocols bgp neighbor
+show network-instance default protocols bgp neighbor 10.10.10.10 detail
+show network-instance default protocols bgp neighbor 10.10.10.10 received-routes evpn
+show network-instance default protocols bgp neighbor 10.10.10.10 advertised-routes evpn
+show network-instance default protocols bgp routes evpn
+show network-instance default protocols bgp summary
+
+---
+
+show network-instance mac-vrf-10 bridge-table mac-table
+show network-instance mac-vrf-10 bridge-table mac-learning
+show tunnel-interface vxlan1 vxlan-interface detail
+
+---
+
+ping network-instance default 10.0.0.2
+traceroute network-instance default 10.0.0.2
+show network-instance default route-table ipv4-unicast summary
+ip addr
+ping 192.168.10.3
+ip neigh show
+
+----
+./configs.sh

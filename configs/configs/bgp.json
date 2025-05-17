@@ -1,0 +1,78 @@
+{
+  "network-instance": [
+    {
+      "name": "default",
+      "protocols": {
+        "bgp": {
+          "autonomous-system": 4200000001,
+          "router-id": "10.0.0.1",
+          "dynamic-neighbors": {
+            "interface": [
+              {
+                "interface-name": "ethernet-1/1.1",
+                "peer-group": "underlay",
+                "allowed-peer-as": [
+                  "4200000010"
+                ]
+              },
+              {
+                "interface-name": "ethernet-1/2.1",
+                "peer-group": "underlay",
+                "allowed-peer-as": [
+                  "4200000011"
+                ]
+              }
+            ]
+          },
+          "afi-safi": [
+            {
+              "afi-safi-name": "ipv4-unicast",
+              "admin-state": "enable"
+            }
+          ],
+          "group": [
+            {
+              "group-name": "overlay",
+              "peer-as": 65535,
+              "_annotate_peer_as": "iBGP to the spine acting as route-reflector",
+              "afi-safi": [
+                {
+                  "afi-safi-name": "evpn",
+                  "admin-state": "enable"
+                },
+                {
+                  "afi-safi-name": "ipv4-unicast",
+                  "admin-state": "disable"
+                }
+              ],
+              "local-as": {
+                "as-number": 65535
+              }
+            },
+            {
+              "group-name": "underlay",
+              "export-policy": [
+                "system-loopbacks-policy"
+              ],
+              "import-policy": [
+                "system-loopbacks-policy"
+              ]
+            }
+          ],
+          "neighbor": [
+            {
+              "peer-address": "10.10.10.10",
+              "admin-state": "enable",
+              "peer-group": "overlay"
+            },
+            {
+              "peer-address": "10.10.10.11",
+              "admin-state": "enable",
+              "peer-group": "overlay"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
